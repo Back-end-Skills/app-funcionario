@@ -41,7 +41,7 @@ isto irá configurar o arquivo composer.json </p>
 
 ### O sistema deve permitir editar um funcionário, com os mesmos campos do cadastro. :heavy_check_mark:
 
-### O sistema deve permitir excluir um funcionário, exibindo uma modal para confirmar a ação. Em desenvolvimento :warning: 
+### O sistema deve permitir excluir um funcionário, exibindo uma modal para confirmar a ação. :heavy_check_mark: 
   
 ### 4 - Principais Referências: :books: 
 - [Web Design Em Foco](https://www.webdesignemfoco.com//)
