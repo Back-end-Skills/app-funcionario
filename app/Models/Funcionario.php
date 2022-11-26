@@ -15,7 +15,9 @@
             'cpf',
             'carteira_trabalho',
             'setor',
-            'contato'
+            'contato',
+            'contato_2',
+
         ];
 
     }

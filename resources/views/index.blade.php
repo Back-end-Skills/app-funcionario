@@ -63,7 +63,7 @@
 						<tr>
 							<th><span>Funcionário</span></th>
 							<th><span>Cpf</span></th>
-							<th class="text-center"><span>Contato</span></th>
+							<th class="text-center"><span>Contato Principal</span></th>
 							<th><span>Carteira Trabalho</span></th>
 							<th>Ações</th>
 						</tr>
