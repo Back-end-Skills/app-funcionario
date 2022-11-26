@@ -18,14 +18,14 @@
 
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         HOME
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       
-      <li><a href="" class="nav-link px-2 link-dark">Lista Funcionários</a></li>
-        <li><a href="" class="nav-link px-2 link-dark">Registrar</a></li>
+      <li><a href="/" class="nav-link px-2 link-dark">Lista Funcionários</a></li>
+        <li><a href="/create" class="nav-link px-2 link-dark">Registrar</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
       </ul>
 
@@ -116,7 +116,7 @@
         <p class="mb-1">&copy;2022 Dev.  Isaque Menezes </p>
         <ul class="list-inline">
         <li class="list-inline-item"><a href="/">HOME</a></li>
-        <li class="list-inline-item"><a href="/funcionarios">Lista Funcionários</a></li>
+        <li class="list-inline-item"><a href="/">Lista Funcionários</a></li>
         <li class="list-inline-item"><a href="#">Support</a></li>
         </ul>
     </footer>

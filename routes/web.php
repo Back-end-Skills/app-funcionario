@@ -14,3 +14,5 @@
 
     Route::delete('/{id}', [FuncionarioController::class, 'destroy']);
 
+    Route::get('/show/{id}', [FuncionarioController::class, 'show']);
+

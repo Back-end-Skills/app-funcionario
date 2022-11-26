@@ -54,7 +54,11 @@
          */
         public function show($id)
         {
-            //
+            $funcionario = Funcionario::find($id);
+
+           // dd()
+
+            return view('show', compact('funcionario'));
         }
 
         public function edit($id)

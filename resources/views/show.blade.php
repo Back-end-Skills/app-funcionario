@@ -41,7 +41,7 @@
 <div class="py-5 text-center">
             
         
-            <h2>Lista de Funcionários</h2>
+            <h2>Funcionário {{ $funcionario->nome }}</h2>
         </div>
 
 
@@ -65,39 +65,44 @@
 							<th><span>Cpf</span></th>
 							<th class="text-center"><span>Contato</span></th>
 							<th><span>Carteira Trabalho</span></th>
+                            <th><span>Data Criaçao</span></th>
+                            <th><span>Última Atualização</span></th>
 							<th>Ações</th>
 						</tr>
 					</thead>
 					<tbody>
-                    @foreach ($funcionarios as $func)
+                 
 						
 						<tr>
 							<td>
 								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt=""/>
 								
-								<a href="/show/{{ $func->id }}" class="user-link">{{ $func->nome }}</a>
+							 <p><strong>	<mark> {{ $funcionario->nome }} </mark> </strong></p>
 								
-								<span class="user-subhead">{{ $func->setor }}</span>
+								<span class="user-subhead">{{ $funcionario->setor }}</span>
 							</td>
 
-							<td>  {{ $func->cpf }}</td>
-							<td class="text-center"> <span class="label label-success">{{ $func->contato }} </span> </td>
-							<td>  {{ $func->carteira_trabalho }} </td>
+							<td>  {{ $funcionario->cpf }}</td>
+							<td class="text-center"> <span class="label label-success">{{ $funcionario->contato }} </span> </td>
+							<td>  {{ $funcionario->carteira_trabalho }} </td>
+
+                            <td>{{ $funcionario->created_at }} </td>
+                            <td>{{ $funcionario->updated_at }} </td>
                             
 							<td style="width: 20%;">
 								
-								<a href="/edit/{{ $func->id }}" class="btn btn-info edit-btn"> Editar </a> <br><br>
+								<a href="/edit/{{ $funcionario->id }}" class="btn btn-info edit-btn"> Editar </a> <br><br>
 
-                                <form action="/{{ $func->id }}" method="post">
+                                <form action="/{{ $funcionario->id }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                         
-                                        <button type="submit" class="btn btn-danger" onclick="return (confirm('Deseja Deletar o Funcionário {{ $func->nome }} ? '))">Delete</button>
+                                        <button type="submit" class="btn btn-danger" onclick="return (confirm('Deseja Deletar o funcionário {{ $funcionario->nome }} ? '))">Delete</button>
                                     
                                 </form>                            
 							</td>                           
 						</tr>
-            @endforeach
+        
 					</tbody>
 				</table>
 			</div>
