@@ -75,7 +75,8 @@
                 'cpf'=>$request->cpf,
                 'carteira_trabalho'=>$request->carteira_trabalho,
                 'setor'=>$request->setor,
-                'contato'=>$request->contato
+                'contato'=>$request->contato,
+                'contato_2'=>$request->contato_2
             ]);
 
             return redirect('/')

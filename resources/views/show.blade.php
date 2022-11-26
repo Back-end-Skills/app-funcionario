@@ -63,7 +63,8 @@
 						<tr>
 							<th><span>Funcionário</span></th>
 							<th><span>Cpf</span></th>
-							<th class="text-center"><span>Contato</span></th>
+							<th class="text-center"><span>Contato Principal</span></th>
+							<th class="text-center"><span>Contato Secundário</span></th>
 							<th><span>Carteira Trabalho</span></th>
                             <th><span>Data Criaçao</span></th>
                             <th><span>Última Atualização</span></th>
@@ -84,6 +85,7 @@
 
 							<td>  {{ $funcionario->cpf }}</td>
 							<td class="text-center"> <span class="label label-success">{{ $funcionario->contato }} </span> </td>
+							<td class="text-center"> <span class="label label-success">{{ $funcionario->contato_2 }} </span> </td>
 							<td>  {{ $funcionario->carteira_trabalho }} </td>
 
                             <td>{{ $funcionario->created_at }} </td>

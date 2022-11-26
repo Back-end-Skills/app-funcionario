@@ -78,12 +78,6 @@
                 </div>
 
                 <div class="col-sm-6">
-                  <label for="carteira_trabalho" class="form-label">Telefone</label>
-                  <input type="text" name="contato" class="form-control" required>
-                  
-                </div>
-
-                <div class="col-sm-6">
                   <label for="cpf" class="form-label">CPF</label>
                   <input type="text" name="cpf" class="form-control" id="cpf" required>
               
@@ -100,6 +94,14 @@
                   
                   </select>                
                 </div>
+
+                <div class="col-sm-6" id="contato">
+                  <label for="" class="form-label">Telefone</label>
+                  <input type="text" name="contato" class="form-control" required> 
+                  <buttom type='button' style="display: block" id="button" onclick="addContato()"> + </button>
+                  
+                </div>
+
             </div>
 
             <hr class="my-4">
@@ -123,7 +125,7 @@
     </div>
 
 
-  
+    <script src="/js/main.js"></script>
 
 
 </body>

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('carteira_trabalho');
             $table->string('setor', 52);
             $table->string('contato', 25);
+            $table->string('contato_2', 25)->nullable(true);
             $table->timestamps();
         });
     }

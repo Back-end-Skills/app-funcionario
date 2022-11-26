@@ -18,14 +18,14 @@
 
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-      <a href="" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
         HOME
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       
-      <li><a href="" class="nav-link px-2 link-dark">Lista Funcionários</a></li>
-        <li><a href="" class="nav-link px-2 link-dark">Registrar</a></li>
+      <li><a href="/" class="nav-link px-2 link-dark">Lista Funcionários</a></li>
+        <li><a href="/create" class="nav-link px-2 link-dark">Registrar</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
       </ul>
 
@@ -78,11 +78,7 @@
                   
                 </div>
 
-                <div class="col-sm-6">
-                  <label for="carteira_trabalho" class="form-label">Telefone</label>
-                  <input type="text" name="contato" class="form-control" value="{{ $funcionarios->contato }}"  required>
-                  
-                </div>
+               
 
                 <div class="col-sm-6">
                   <label for="cpf" class="form-label">CPF</label>
@@ -101,11 +97,25 @@
                   
                   </select>                
                 </div>
+
+                <div class="col-sm-6">
+                  <label for="" class="form-label">Telefone</label>
+                  <input type="text" name="contato" class="form-control" value="{{ $funcionarios->contato }}"  required>
+                  
+                </div>
+
+                <div class="col-sm-6">
+                  <label for="" class="form-label">Telefone 2</label>
+                  <input type="text" name="contato_2" class="form-control" value="{{ $funcionarios->contato_2 }}" >
+                  
+                </div>
+
+
             </div>
 
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Cadastrar</button>
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Editar</button>
             </form>
         </div>
         </div>
