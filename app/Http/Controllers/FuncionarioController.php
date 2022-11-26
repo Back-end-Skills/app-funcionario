@@ -77,7 +77,6 @@
             return redirect('/')
                     ->with('success', 'Funcionário Atualizado com sucesso');
         }
-
         
         public function destroy($id)
         {
@@ -86,5 +85,6 @@
             return redirect('/')
                     ->with('success', 'Funcionário deletado com sucesso');
         }
+      
 
-    }
+     }

@@ -31,7 +31,7 @@
 
       <div class="col-md-3 text-end">
         <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
+        <button type="button" class="btn btn-primary">Feat-Confirm-Delete</button>
       </div>
     </header>
   </div>
@@ -80,24 +80,20 @@
 
 							<td>  {{ $func->cpf }}</td>
 							<td class="text-center"> <span class="label label-success">{{ $func->contato }} </span> </td>
-							<td> <a href="#"> {{ $func->carteira_trabalho }}</a> </td>
+							<td> {{ $func->carteira_trabalho }}</td>
                             
 							<td style="width: 20%;">
 								
 								<a href="/edit/{{ $func->id }}" class="btn btn-info edit-btn"> Editar </a> <br><br>
 
-                                <form action="/{{ $func->id }}" method="post">
-                                 
-                                        @csrf
-                                        @method('DELETE')
+                                <form action="/{{ $func->id }}" method="post" id="formulario">
+									@csrf
+                                	@method('DELETE')
                                         
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </div>
+									<button class="btn btn-danger" onclick="return confirm('Deseja Deletar o Funcionário ?')"> Deletar </button>
+                                    
                                 </form>
-                                <!-- <a href="/" class="btn btn-info edit-btn"> Editar </a> <br><br> -->
-
-							</td>
-                            
+							</td>                            
 						</tr>
             @endforeach
 					</tbody>
@@ -108,8 +104,6 @@
 	</div>
 </div>
 </div>
-
-
 
 </body>
 
