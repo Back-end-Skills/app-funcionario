@@ -4,6 +4,7 @@
 
     use Illuminate\Http\Request;
     use App\Models\Funcionario;
+    use Illuminate\Support\Facades\DB;
 
     class FuncionarioController extends Controller
     {
@@ -15,7 +16,8 @@
         
         public function index(Funcionario  $func)
         {
-            $funcionarios = $func->all();
+            // $funcionarios = $func->all();
+            $funcionarios = DB::table('funcionarios')->orderByRaw('id DESC')->get();
 
             return view('index', compact('funcionarios'));
         }
