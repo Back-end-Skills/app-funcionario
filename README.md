@@ -22,7 +22,7 @@ isto irá configurar o arquivo composer.json </p>
     3.1 .env  
     
 ## Lista de Tarefas
-### O sistema deve permitir o cadastro de funcionários com os campos: 
+### O sistema deve permitir o cadastro de funcionários com os campos :heavy_check_mark: 
 
     1.1 CPF (único)
     1.2 Nome
