@@ -2,6 +2,7 @@
 
     namespace App\Http\Controllers;
 
+    use App\Http\Requests\UserStoreRequest;
     use Illuminate\Http\Request;
     use App\Models\Funcionario;
     use Illuminate\Support\Facades\DB;
@@ -19,7 +20,7 @@
             // $funcionarios = $func->all();
             $funcionarios = DB::table('funcionarios')->orderByRaw('id DESC')->get();
 
-            return view('index', compact('funcionarios'));
+            return view('funcionarios.index', compact('funcionarios'));
         }
 
         /**
@@ -29,18 +30,20 @@
          */
         public function create()
         {
-            return view('create');
+            return view('funcionarios.create');
         }
 
-        public function store(Request $request)
+        public function store(UserStoreRequest $request)
         {
-            $request->validate([
-                'nome' => 'required',
-                'cpf' => 'required',
-                'carteira_trabalho' => 'required',
-                'setor' => 'required',
-                'contato' => 'required'
-            ]);
+            //dd($request->all());
+            // $request->validate([
+            //     'nome' => 'required',
+            //     'cpf' => 'required',
+            //     'carteira_trabalho' => 'required',
+            //     'setor' => 'required',
+            //     'contato' => 'required'
+            // ]);
+            $request->validated();
 
             Funcionario::create($request->all());
 
@@ -60,14 +63,14 @@
 
            // dd()
 
-            return view('show', compact('funcionario'));
+            return view('funcionarios.show', compact('funcionario'));
         }
 
         public function edit($id)
         {
             $funcionarios=Funcionario::find($id);
 
-            return view('edit', compact('funcionarios'));
+            return view('funcionarios.edit', compact('funcionarios'));
         }
 
         public function update(Request $request, $id)
